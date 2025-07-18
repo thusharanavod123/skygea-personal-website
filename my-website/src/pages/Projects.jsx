@@ -1,15 +1,33 @@
 import React from "react";
+import PropTypes from "prop-types";
+import styles from "./Projects.module.css";
 
-const Projects = () => (
-  <div className="projects">
-    <h1>Projects & Achievements</h1>
+const Projects = ({ title, projects }) => (
+  <section className={styles.projects} aria-label="Projects and Achievements section">
+    <h1>{title}</h1>
     <ul>
-      <li>Launched Skygea's flagship digital platform</li>
-      <li>Managed multi-million dollar finance campaigns</li>
-      <li>Developed successful marketing strategies for global brands</li>
-      <li>Speaker at international finance and marketing conferences</li>
+      {projects.map((project, index) => (
+        <li key={index}>{project}</li>
+      ))}
     </ul>
-  </div>
+  </section>
 );
+
+Projects.propTypes = {
+  title: PropTypes.string,
+  projects: PropTypes.arrayOf(PropTypes.string),
+};
+
+Projects.defaultProps = {
+  title: "Projects & Achievements",
+  projects: [
+    "Launched Skygea's flagship digital platform",
+    "Managed multi-million dollar finance campaigns",
+    "Developed successful marketing strategies for global brands",
+    "Speaker at international finance and marketing conferences",
+    "Built stylish and modern blog websites using lovable.dev",
+    "Developed websites for tea factories and personal branding using Vercel, GitHub, and Astro",
+  ],
+};
 
 export default Projects;

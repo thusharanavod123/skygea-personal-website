@@ -1,15 +1,23 @@
 import React from "react";
+import PropTypes from "prop-types";
+import styles from "./About.module.css";
 
-const About = () => (
-  <div className="about">
-    <h1>About Me</h1>
-    <p>
-      I am passionate about finance and digital marketing, with years of
-      experience leading teams and driving business success. As the CEO of
-      Skygea, my mission is to empower organizations to reach their full
-      potential through innovative strategies and leadership.
-    </p>
-  </div>
-);
+const About = ({ title, description }) => {
+  return (
+    <section className={styles.about} aria-label="About section">
+      <h1>{title}</h1>
+      <p>{description}</p>
+    </section>
+  );
+};
+
+About.propTypes = {
+  title: PropTypes.string,
+  description: PropTypes.string.isRequired,
+};
+
+About.defaultProps = {
+  title: "About Me",
+};
 
 export default About;

@@ -1,0 +1,23 @@
+.projects {
+  padding: 2rem;
+  background: #eef4fb;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(70, 90, 130, 0.1);
+  max-width: 700px;
+  margin: 2rem auto;
+  font-size: 1.125rem;
+}
+.projects h1 {
+  color: #1c3879;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.projects ul {
+  margin-left: 1.3rem;
+  padding-left: 0;
+}
+.projects li {
+  margin-bottom: 0.65rem;
+  line-height: 1.55;
+  color: #21325e;
+}

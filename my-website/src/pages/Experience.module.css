@@ -1,0 +1,30 @@
+.experience {
+  padding: 2rem;
+  background: #f6f8fa;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(60, 60, 60, 0.09);
+  max-width: 700px;
+  margin: 2rem auto;
+  font-size: 1.08rem;
+}
+.experience h1 {
+  color: #283593;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.experience h2 {
+  color: #1565c0;
+  font-size: 1.4rem;
+  margin-bottom: 0.7rem;
+}
+.experience h3 {
+  color: #3949ab;
+  margin-top: 1.5rem;
+}
+.experience ul {
+  margin: 0.5rem 0 0 1.2rem;
+  padding: 0;
+}
+.experience li {
+  margin-bottom: 0.4rem;
+}
