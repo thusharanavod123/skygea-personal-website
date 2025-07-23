@@ -1,3 +1,5 @@
+"use client";
+
 const projects = [
   {
     title: 'Personal Website',
