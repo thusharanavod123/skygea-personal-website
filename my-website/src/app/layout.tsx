@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import NavBar from "./components/NavBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,22 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={geistSans.variable}>
-        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem', marginBottom: '2rem' }}>
-          <nav style={{
-            display: 'flex',
-            gap: '2rem',
-            padding: '1rem 2rem',
-            background: 'linear-gradient(90deg, #6a11cb 0%, #2575fc 100%)',
-            borderRadius: '2rem',
-            boxShadow: '0 4px 24px rgba(0,0,0,0.08)',
-            alignItems: 'center',
-          }}>
-            <a href="/" style={{ color: '#fff', textDecoration: 'none', fontWeight: 600, fontSize: '1.1rem', transition: 'color 0.2s', padding: '0.5rem 1rem', borderRadius: '1rem' }} onMouseOver={e => e.currentTarget.style.color = '#ffd700'} onMouseOut={e => e.currentTarget.style.color = '#fff'}>Home</a>
-            <a href="/about" style={{ color: '#fff', textDecoration: 'none', fontWeight: 600, fontSize: '1.1rem', transition: 'color 0.2s', padding: '0.5rem 1rem', borderRadius: '1rem' }} onMouseOver={e => e.currentTarget.style.color = '#ffd700'} onMouseOut={e => e.currentTarget.style.color = '#fff'}>About</a>
-            <a href="/projects" style={{ color: '#fff', textDecoration: 'none', fontWeight: 600, fontSize: '1.1rem', transition: 'color 0.2s', padding: '0.5rem 1rem', borderRadius: '1rem' }} onMouseOver={e => e.currentTarget.style.color = '#ffd700'} onMouseOut={e => e.currentTarget.style.color = '#fff'}>Projects</a>
-            <a href="/contact" style={{ color: '#fff', textDecoration: 'none', fontWeight: 600, fontSize: '1.1rem', transition: 'color 0.2s', padding: '0.5rem 1rem', borderRadius: '1rem' }} onMouseOver={e => e.currentTarget.style.color = '#ffd700'} onMouseOut={e => e.currentTarget.style.color = '#fff'}>Contact</a>
-          </nav>
-        </div>
+        <NavBar />
         {children}
       </body>
     </html>
